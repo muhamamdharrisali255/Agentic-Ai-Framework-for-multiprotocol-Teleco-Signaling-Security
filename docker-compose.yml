@@ -1,0 +1,88 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: signaling_postgres
+    environment:
+      POSTGRES_USER: signaling
+      POSTGRES_PASSWORD: signaling
+      POSTGRES_DB: signaling_rag
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U signaling -d signaling_rag"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.5
+    container_name: signaling_qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrantdata:/qdrant/storage
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:6333/readyz || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  mongo:
+    image: mongo:7
+    container_name: signaling_mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: signaling
+      MONGO_INITDB_ROOT_PASSWORD: signaling
+      MONGO_INITDB_DATABASE: signaling_rag
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mongosh",
+          "-u",
+          "signaling",
+          "-p",
+          "signaling",
+          "--authenticationDatabase",
+          "admin",
+          "--quiet",
+          "--eval",
+          "db.adminCommand('ping')",
+        ]
+      interval: 5s
+      timeout: 8s
+      retries: 12
+
+  neo4j:
+    image: neo4j:5-community
+    container_name: signaling_neo4j
+    environment:
+      NEO4J_AUTH: neo4j/signaling123
+      NEO4J_PLUGINS: '[]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4jdata:/data
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  pgdata:
+  qdrantdata:
+  mongodata:
+  neo4jdata:

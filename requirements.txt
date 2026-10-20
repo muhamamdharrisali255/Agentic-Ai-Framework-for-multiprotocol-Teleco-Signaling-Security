@@ -1,0 +1,56 @@
+# =============================================================================
+# Signaling Firewall — Python dependencies
+# Install:  python -m venv .venv && source .venv/bin/activate
+#           pip install -r requirements.txt
+# Frontend: cd frontend && npm install && npm run build
+# Models:   see models/README.md (weights are NOT installed via pip)
+# =============================================================================
+
+# --- Core ---
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+requests>=2.31.0
+
+# --- API ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+
+# --- Document parsing ---
+pypdf>=4.0.0
+pdfplumber>=0.11.0
+docling>=2.0.0
+
+# --- Embeddings & vector search ---
+sentence-transformers>=3.0.0
+numpy>=1.26.0
+rank-bm25>=0.2.2
+# Prefer faiss-cpu if you do not have a CUDA FAISS wheel:
+# faiss-cpu>=1.8.0
+faiss-gpu>=1.8.0; platform_system != "Darwin"
+
+# --- LLM runtime ---
+transformers>=4.40.0
+torch>=2.3.0
+accelerate>=0.34.0
+bitsandbytes>=0.43.0
+
+# --- Hybrid RAG stores ---
+pymongo>=4.6.0
+neo4j>=5.0.0
+qdrant-client>=1.12.0
+psycopg[binary]>=3.2.0
+
+# --- Agentic orchestration ---
+langgraph>=0.2.0
+
+# --- Packet / IDS helpers ---
+scapy>=2.5.0
+
+# --- Evaluation & reporting ---
+tabulate>=0.9.0
+reportlab>=4.0.0
+openpyxl>=3.1.0
+
+# --- Tests ---
+pytest>=8.0.0

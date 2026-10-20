@@ -1,0 +1,1607 @@
+{
+  "title": "Multi-protocol telecom signaling security benchmark \u2014 250 questions",
+  "version": "1.0",
+  "categories": [
+    "attack_detection",
+    "case1_live_ids",
+    "ids_suricata",
+    "investigation",
+    "ir21_operator",
+    "policy_validation",
+    "protocol_messages",
+    "rule_drafting",
+    "standards_knowledge"
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "category": "standards_knowledge",
+      "question": "What is a Category-1 signaling message?"
+    },
+    {
+      "id": "Q02",
+      "category": "standards_knowledge",
+      "question": "Which SS7 messages are prohibited on an international roaming interface?"
+    },
+    {
+      "id": "Q03",
+      "category": "standards_knowledge",
+      "question": "What is the difference between Category-2 and Category-3 signaling?"
+    },
+    {
+      "id": "Q04",
+      "category": "standards_knowledge",
+      "question": "What is the difference between Category-3.1 and Category-3.2?"
+    },
+    {
+      "id": "Q05",
+      "category": "protocol_messages",
+      "question": "Which Diameter messages are normally associated with LTE authentication and location management?"
+    },
+    {
+      "id": "Q06",
+      "category": "protocol_messages",
+      "question": "Which GTP-C messages are relevant to roaming session establishment?"
+    },
+    {
+      "id": "Q07",
+      "category": "policy_validation",
+      "question": "What parameters are used to validate an inbound roaming UpdateLocation?"
+    },
+    {
+      "id": "Q08",
+      "category": "policy_validation",
+      "question": "What parameters should be validated for a Diameter ULR?"
+    },
+    {
+      "id": "Q09",
+      "category": "policy_validation",
+      "question": "What parameters should be validated for a GTP Create Session Request?"
+    },
+    {
+      "id": "Q10",
+      "category": "policy_validation",
+      "question": "Why is MCC/MNC equality not sufficient for validating inbound roaming?"
+    },
+    {
+      "id": "Q11",
+      "category": "ir21_operator",
+      "question": "What CAP versions does Zain Kuwait support for gsmSSF/MSC?"
+    },
+    {
+      "id": "Q12",
+      "category": "ir21_operator",
+      "question": "Does Zain Kuwait support S6a without IWF?"
+    },
+    {
+      "id": "Q13",
+      "category": "ir21_operator",
+      "question": "List the SGSN global titles for Zain Kuwait from IR.21."
+    },
+    {
+      "id": "Q14",
+      "category": "ir21_operator",
+      "question": "What is the HLR GT address for Zain Kuwait?"
+    },
+    {
+      "id": "Q15",
+      "category": "ir21_operator",
+      "question": "What MSC/VLR GT does Zain Kuwait publish in IR.21?"
+    },
+    {
+      "id": "Q16",
+      "category": "ir21_operator",
+      "question": "Is S6a MAP IWF supported to HSS for Zain Kuwait?"
+    },
+    {
+      "id": "Q17",
+      "category": "ir21_operator",
+      "question": "What inbound and outbound CAP versions are declared for Zain Kuwait gsmSSF/MSC?"
+    },
+    {
+      "id": "Q18",
+      "category": "ids_suricata",
+      "question": "What Suricata detection rule exists for unauthorized inbound Diameter ULR?"
+    },
+    {
+      "id": "Q19",
+      "category": "ids_suricata",
+      "question": "Quote the enrolled Suricata rule for AIR vector probing."
+    },
+    {
+      "id": "Q20",
+      "category": "ids_suricata",
+      "question": "What detection rule monitors SS7 SAI authentication vector probing?"
+    },
+    {
+      "id": "Q21",
+      "category": "ids_suricata",
+      "question": "Which Suricata sid is used for TEL-MP-SS7-DIA-GTP-ROAMING-ABUSE?"
+    },
+    {
+      "id": "Q22",
+      "category": "ids_suricata",
+      "question": "How do I filter Diameter ULR Command-Code 316 with tshark?"
+    },
+    {
+      "id": "Q23",
+      "category": "ids_suricata",
+      "question": "What GTP ports and gtp_type keywords are used in Suricata/Snort GTP rules?"
+    },
+    {
+      "id": "Q24",
+      "category": "rule_drafting",
+      "question": "Write a Suricata rule to block unauthorized inbound Diameter ULR on the roaming interface."
+    },
+    {
+      "id": "Q25",
+      "category": "attack_detection",
+      "question": "What attack pattern is AP002 and which detection rule detects it?"
+    },
+    {
+      "id": "Q26",
+      "category": "attack_detection",
+      "question": "Map Diameter authentication vector probing to its enrolled detection rule."
+    },
+    {
+      "id": "Q27",
+      "category": "attack_detection",
+      "question": "What Suricata rule exists for attack pattern AP008?"
+    },
+    {
+      "id": "Q28",
+      "category": "attack_detection",
+      "question": "Describe GTP session without signaling context and the rule that detects it."
+    },
+    {
+      "id": "Q29",
+      "category": "investigation",
+      "question": "Is this a GTP hijack and what detection guidance or rule applies?"
+    },
+    {
+      "id": "Q30",
+      "category": "attack_detection",
+      "question": "Translate unauthorized APN routing abuse into the enrolled detection rule name and action."
+    },
+    {
+      "id": "Q31",
+      "category": "protocol_messages",
+      "question": "What is the Diameter Command-Code for Update-Location-Request (ULR)?"
+    },
+    {
+      "id": "Q32",
+      "category": "protocol_messages",
+      "question": "What Application-Id is used for the S6a Diameter interface?"
+    },
+    {
+      "id": "Q33",
+      "category": "protocol_messages",
+      "question": "What GTPv2 message type value corresponds to Create Session Request?"
+    },
+    {
+      "id": "Q34",
+      "category": "protocol_messages",
+      "question": "Which UDP port is standard for GTP-C control plane traffic?"
+    },
+    {
+      "id": "Q35",
+      "category": "policy_validation",
+      "question": "What checks should a firewall perform on an inbound PSI (Provide Subscriber Info) request?"
+    },
+    {
+      "id": "Q36",
+      "category": "standards_knowledge",
+      "question": "What is Category-2 signaling and when is it permitted on interconnect?"
+    },
+    {
+      "id": "Q37",
+      "category": "standards_knowledge",
+      "question": "How does FS.19 recommend securing Diameter interconnect links?"
+    },
+    {
+      "id": "Q38",
+      "category": "standards_knowledge",
+      "question": "What FS document covers GTP security recommendations for mobile core interconnect?"
+    },
+    {
+      "id": "Q39",
+      "category": "policy_validation",
+      "question": "What is the purpose of Origin-Host and Origin-Realm validation in a Diameter ULR?"
+    },
+    {
+      "id": "Q40",
+      "category": "investigation",
+      "question": "Explain unauthorized session establishment in a GTP roaming context."
+    },
+    {
+      "id": "Q41",
+      "category": "attack_detection",
+      "question": "What attack pattern AP001 detects and what is its objective?"
+    },
+    {
+      "id": "Q42",
+      "category": "ids_suricata",
+      "question": "What action and sid are configured for detection rule DR002?"
+    },
+    {
+      "id": "Q43",
+      "category": "ids_suricata",
+      "question": "When drafting Suricata rules, how should BLOCK policy map to alert vs drop?"
+    },
+    {
+      "id": "Q44",
+      "category": "policy_validation",
+      "question": "What parameters should be validated for a Diameter AIR (Authentication-Information-Request)?"
+    },
+    {
+      "id": "Q45",
+      "category": "policy_validation",
+      "question": "Compare inbound vs outbound Diameter ULR validation requirements."
+    },
+    {
+      "id": "Q46",
+      "category": "standards_knowledge",
+      "question": "Which MAP operations are typically treated as prohibited Category-1 on international interconnect?"
+    },
+    {
+      "id": "Q47",
+      "category": "investigation",
+      "question": "What is authentication vector probing in Diameter and why is it a threat?"
+    },
+    {
+      "id": "Q48",
+      "category": "investigation",
+      "question": "How can SS7 location manipulation be detected at an interconnect firewall?"
+    },
+    {
+      "id": "Q49",
+      "category": "rule_drafting",
+      "question": "Create a detection rule for unauthorized inbound Diameter ULR with Command-Code 316."
+    },
+    {
+      "id": "Q50",
+      "category": "standards_knowledge",
+      "question": "What are the main security recommendations in FS.21 for interconnect signalling?"
+    },
+    {
+      "id": "Q051",
+      "category": "standards_knowledge",
+      "question": "According to FS.19, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q052",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Update-Location-Request (ULR) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q053",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Vodafone Egypt (EGYVF), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q054",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP CSR (code/opcode 32)?"
+    },
+    {
+      "id": "Q055",
+      "category": "attack_detection",
+      "question": "Map the attack 'Origin-Realm spoofing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q056",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ISD from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q057",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected authentication vector probing involving STC Saudi Arabia."
+    },
+    {
+      "id": "Q058",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for UpdateLocation, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q059",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Vodafone Egypt. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "20101234567",
+        "opcode": 56,
+        "procedure": "SendAuthenticationInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected GTP session hijacking",
+          "signature_id": 900004,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q060",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ULR versus legitimate roaming traffic from Etisalat UAE."
+    },
+    {
+      "id": "Q061",
+      "category": "standards_knowledge",
+      "question": "According to IR.21, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q062",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Create Session Request (CSR) under CAT2 policy?"
+    },
+    {
+      "id": "Q063",
+      "category": "ir21_operator",
+      "question": "From IR.21 for STC Saudi Arabia (SAUSTC), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q064",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ISD (code/opcode 7)?"
+    },
+    {
+      "id": "Q065",
+      "category": "attack_detection",
+      "question": "Map the attack 'authentication vector probing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q066",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP UL from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q067",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected GTP session hijacking involving Zain Kuwait."
+    },
+    {
+      "id": "Q068",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Update-Location-Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q069",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from STC Saudi Arabia. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "966501234567",
+        "opcode": 318,
+        "procedure": "Authentication-Information-Request",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected impossible travel / velocity check",
+          "signature_id": 900006,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q070",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for CSR versus legitimate roaming traffic from Mobily Saudi Arabia."
+    },
+    {
+      "id": "Q071",
+      "category": "standards_knowledge",
+      "question": "According to FS.11, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q072",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter InsertSubscriberData (ISD) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q073",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Zain Kuwait (KWTZH), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q074",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP UL (code/opcode 2)?"
+    },
+    {
+      "id": "Q075",
+      "category": "attack_detection",
+      "question": "Map the attack 'GTP session hijacking' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q076",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ULR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q077",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected impossible travel / velocity check involving Vodafone Egypt."
+    },
+    {
+      "id": "Q078",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Create Session Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q079",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Zain Kuwait. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "965961234567",
+        "opcode": 70,
+        "procedure": "ProvideSubscriberInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected Origin-Realm spoofing",
+          "signature_id": 900008,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q080",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ISD versus legitimate roaming traffic from Ooredoo Kuwait."
+    },
+    {
+      "id": "Q081",
+      "category": "standards_knowledge",
+      "question": "According to FS.21, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q082",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter UpdateLocation (UL) under CAT2 policy?"
+    },
+    {
+      "id": "Q083",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Vodafone Egypt (EGYVF), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q084",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ULR (code/opcode 316)?"
+    },
+    {
+      "id": "Q085",
+      "category": "attack_detection",
+      "question": "Map the attack 'impossible travel / velocity check' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q086",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP CSR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q087",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected Origin-Realm spoofing involving STC Saudi Arabia."
+    },
+    {
+      "id": "Q088",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for InsertSubscriberData, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q089",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Vodafone Egypt. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "20101234567",
+        "opcode": 71,
+        "procedure": "AnyTimeInterrogation",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected authentication vector probing",
+          "signature_id": 900002,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q090",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for UL versus legitimate roaming traffic from Etisalat UAE."
+    },
+    {
+      "id": "Q091",
+      "category": "standards_knowledge",
+      "question": "According to 3GPP TS 29.274, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q092",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Update-Location-Request (ULR) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q093",
+      "category": "ir21_operator",
+      "question": "From IR.21 for STC Saudi Arabia (SAUSTC), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q094",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP CSR (code/opcode 32)?"
+    },
+    {
+      "id": "Q095",
+      "category": "attack_detection",
+      "question": "Map the attack 'Origin-Realm spoofing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q096",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ISD from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q097",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected authentication vector probing involving Zain Kuwait."
+    },
+    {
+      "id": "Q098",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for UpdateLocation, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q099",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from STC Saudi Arabia. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "966501234567",
+        "opcode": 56,
+        "procedure": "SendAuthenticationInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected GTP session hijacking",
+          "signature_id": 900004,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q100",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ULR versus legitimate roaming traffic from Mobily Saudi Arabia."
+    },
+    {
+      "id": "Q101",
+      "category": "standards_knowledge",
+      "question": "According to FS.20, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q102",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Create Session Request (CSR) under CAT2 policy?"
+    },
+    {
+      "id": "Q103",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Zain Kuwait (KWTZH), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q104",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ISD (code/opcode 7)?"
+    },
+    {
+      "id": "Q105",
+      "category": "attack_detection",
+      "question": "Map the attack 'authentication vector probing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q106",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP UL from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q107",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected GTP session hijacking involving Vodafone Egypt."
+    },
+    {
+      "id": "Q108",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Update-Location-Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q109",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Zain Kuwait. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "965961234567",
+        "opcode": 318,
+        "procedure": "Authentication-Information-Request",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected impossible travel / velocity check",
+          "signature_id": 900006,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q110",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for CSR versus legitimate roaming traffic from Ooredoo Kuwait."
+    },
+    {
+      "id": "Q111",
+      "category": "standards_knowledge",
+      "question": "According to 3GPP TS 29.272, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q112",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter InsertSubscriberData (ISD) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q113",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Vodafone Egypt (EGYVF), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q114",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP UL (code/opcode 2)?"
+    },
+    {
+      "id": "Q115",
+      "category": "attack_detection",
+      "question": "Map the attack 'GTP session hijacking' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q116",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ULR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q117",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected impossible travel / velocity check involving STC Saudi Arabia."
+    },
+    {
+      "id": "Q118",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Create Session Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q119",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Vodafone Egypt. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "20101234567",
+        "opcode": 70,
+        "procedure": "ProvideSubscriberInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected Origin-Realm spoofing",
+          "signature_id": 900008,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q120",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ISD versus legitimate roaming traffic from Etisalat UAE."
+    },
+    {
+      "id": "Q121",
+      "category": "standards_knowledge",
+      "question": "According to FS.19, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q122",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter UpdateLocation (UL) under CAT2 policy?"
+    },
+    {
+      "id": "Q123",
+      "category": "ir21_operator",
+      "question": "From IR.21 for STC Saudi Arabia (SAUSTC), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q124",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ULR (code/opcode 316)?"
+    },
+    {
+      "id": "Q125",
+      "category": "attack_detection",
+      "question": "Map the attack 'impossible travel / velocity check' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q126",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP CSR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q127",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected Origin-Realm spoofing involving Zain Kuwait."
+    },
+    {
+      "id": "Q128",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for InsertSubscriberData, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q129",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from STC Saudi Arabia. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "966501234567",
+        "opcode": 71,
+        "procedure": "AnyTimeInterrogation",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected authentication vector probing",
+          "signature_id": 900002,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q130",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for UL versus legitimate roaming traffic from Mobily Saudi Arabia."
+    },
+    {
+      "id": "Q131",
+      "category": "standards_knowledge",
+      "question": "According to IR.21, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q132",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Update-Location-Request (ULR) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q133",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Zain Kuwait (KWTZH), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q134",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP CSR (code/opcode 32)?"
+    },
+    {
+      "id": "Q135",
+      "category": "attack_detection",
+      "question": "Map the attack 'Origin-Realm spoofing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q136",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ISD from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q137",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected authentication vector probing involving Vodafone Egypt."
+    },
+    {
+      "id": "Q138",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for UpdateLocation, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q139",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Zain Kuwait. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "965961234567",
+        "opcode": 56,
+        "procedure": "SendAuthenticationInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected GTP session hijacking",
+          "signature_id": 900004,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q140",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ULR versus legitimate roaming traffic from Ooredoo Kuwait."
+    },
+    {
+      "id": "Q141",
+      "category": "standards_knowledge",
+      "question": "According to FS.11, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q142",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Create Session Request (CSR) under CAT2 policy?"
+    },
+    {
+      "id": "Q143",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Vodafone Egypt (EGYVF), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q144",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ISD (code/opcode 7)?"
+    },
+    {
+      "id": "Q145",
+      "category": "attack_detection",
+      "question": "Map the attack 'authentication vector probing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q146",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP UL from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q147",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected GTP session hijacking involving STC Saudi Arabia."
+    },
+    {
+      "id": "Q148",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Update-Location-Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q149",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Vodafone Egypt. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "20101234567",
+        "opcode": 318,
+        "procedure": "Authentication-Information-Request",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected impossible travel / velocity check",
+          "signature_id": 900006,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q150",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for CSR versus legitimate roaming traffic from Etisalat UAE."
+    },
+    {
+      "id": "Q151",
+      "category": "standards_knowledge",
+      "question": "According to FS.21, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q152",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter InsertSubscriberData (ISD) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q153",
+      "category": "ir21_operator",
+      "question": "From IR.21 for STC Saudi Arabia (SAUSTC), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q154",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP UL (code/opcode 2)?"
+    },
+    {
+      "id": "Q155",
+      "category": "attack_detection",
+      "question": "Map the attack 'GTP session hijacking' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q156",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ULR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q157",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected impossible travel / velocity check involving Zain Kuwait."
+    },
+    {
+      "id": "Q158",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Create Session Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q159",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from STC Saudi Arabia. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "966501234567",
+        "opcode": 70,
+        "procedure": "ProvideSubscriberInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected Origin-Realm spoofing",
+          "signature_id": 900008,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q160",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ISD versus legitimate roaming traffic from Mobily Saudi Arabia."
+    },
+    {
+      "id": "Q161",
+      "category": "standards_knowledge",
+      "question": "According to 3GPP TS 29.274, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q162",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter UpdateLocation (UL) under CAT2 policy?"
+    },
+    {
+      "id": "Q163",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Zain Kuwait (KWTZH), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q164",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ULR (code/opcode 316)?"
+    },
+    {
+      "id": "Q165",
+      "category": "attack_detection",
+      "question": "Map the attack 'impossible travel / velocity check' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q166",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP CSR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q167",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected Origin-Realm spoofing involving Vodafone Egypt."
+    },
+    {
+      "id": "Q168",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for InsertSubscriberData, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q169",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Zain Kuwait. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "965961234567",
+        "opcode": 71,
+        "procedure": "AnyTimeInterrogation",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected authentication vector probing",
+          "signature_id": 900002,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q170",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for UL versus legitimate roaming traffic from Ooredoo Kuwait."
+    },
+    {
+      "id": "Q171",
+      "category": "standards_knowledge",
+      "question": "According to FS.20, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q172",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Update-Location-Request (ULR) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q173",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Vodafone Egypt (EGYVF), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q174",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP CSR (code/opcode 32)?"
+    },
+    {
+      "id": "Q175",
+      "category": "attack_detection",
+      "question": "Map the attack 'Origin-Realm spoofing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q176",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ISD from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q177",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected authentication vector probing involving STC Saudi Arabia."
+    },
+    {
+      "id": "Q178",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for UpdateLocation, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q179",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Vodafone Egypt. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "20101234567",
+        "opcode": 56,
+        "procedure": "SendAuthenticationInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected GTP session hijacking",
+          "signature_id": 900004,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q180",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ULR versus legitimate roaming traffic from Etisalat UAE."
+    },
+    {
+      "id": "Q181",
+      "category": "standards_knowledge",
+      "question": "According to 3GPP TS 29.272, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q182",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Create Session Request (CSR) under CAT2 policy?"
+    },
+    {
+      "id": "Q183",
+      "category": "ir21_operator",
+      "question": "From IR.21 for STC Saudi Arabia (SAUSTC), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q184",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ISD (code/opcode 7)?"
+    },
+    {
+      "id": "Q185",
+      "category": "attack_detection",
+      "question": "Map the attack 'authentication vector probing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q186",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP UL from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q187",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected GTP session hijacking involving Zain Kuwait."
+    },
+    {
+      "id": "Q188",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Update-Location-Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q189",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from STC Saudi Arabia. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "966501234567",
+        "opcode": 318,
+        "procedure": "Authentication-Information-Request",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected impossible travel / velocity check",
+          "signature_id": 900006,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q190",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for CSR versus legitimate roaming traffic from Mobily Saudi Arabia."
+    },
+    {
+      "id": "Q191",
+      "category": "standards_knowledge",
+      "question": "According to FS.19, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q192",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter InsertSubscriberData (ISD) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q193",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Zain Kuwait (KWTZH), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q194",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP UL (code/opcode 2)?"
+    },
+    {
+      "id": "Q195",
+      "category": "attack_detection",
+      "question": "Map the attack 'GTP session hijacking' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q196",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ULR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q197",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected impossible travel / velocity check involving Vodafone Egypt."
+    },
+    {
+      "id": "Q198",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Create Session Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q199",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Zain Kuwait. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "965961234567",
+        "opcode": 70,
+        "procedure": "ProvideSubscriberInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected Origin-Realm spoofing",
+          "signature_id": 900008,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q200",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ISD versus legitimate roaming traffic from Ooredoo Kuwait."
+    },
+    {
+      "id": "Q201",
+      "category": "standards_knowledge",
+      "question": "According to IR.21, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q202",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter UpdateLocation (UL) under CAT2 policy?"
+    },
+    {
+      "id": "Q203",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Vodafone Egypt (EGYVF), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q204",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ULR (code/opcode 316)?"
+    },
+    {
+      "id": "Q205",
+      "category": "attack_detection",
+      "question": "Map the attack 'impossible travel / velocity check' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q206",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP CSR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q207",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected Origin-Realm spoofing involving STC Saudi Arabia."
+    },
+    {
+      "id": "Q208",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for InsertSubscriberData, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q209",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Vodafone Egypt. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "20101234567",
+        "opcode": 71,
+        "procedure": "AnyTimeInterrogation",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected authentication vector probing",
+          "signature_id": 900002,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q210",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for UL versus legitimate roaming traffic from Etisalat UAE."
+    },
+    {
+      "id": "Q211",
+      "category": "standards_knowledge",
+      "question": "According to FS.11, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q212",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Update-Location-Request (ULR) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q213",
+      "category": "ir21_operator",
+      "question": "From IR.21 for STC Saudi Arabia (SAUSTC), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q214",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP CSR (code/opcode 32)?"
+    },
+    {
+      "id": "Q215",
+      "category": "attack_detection",
+      "question": "Map the attack 'Origin-Realm spoofing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q216",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ISD from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q217",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected authentication vector probing involving Zain Kuwait."
+    },
+    {
+      "id": "Q218",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for UpdateLocation, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q219",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from STC Saudi Arabia. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "966501234567",
+        "opcode": 56,
+        "procedure": "SendAuthenticationInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected GTP session hijacking",
+          "signature_id": 900004,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q220",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ULR versus legitimate roaming traffic from Mobily Saudi Arabia."
+    },
+    {
+      "id": "Q221",
+      "category": "standards_knowledge",
+      "question": "According to FS.21, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q222",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter Create Session Request (CSR) under CAT2 policy?"
+    },
+    {
+      "id": "Q223",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Zain Kuwait (KWTZH), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q224",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ISD (code/opcode 7)?"
+    },
+    {
+      "id": "Q225",
+      "category": "attack_detection",
+      "question": "Map the attack 'authentication vector probing' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q226",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP UL from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q227",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected GTP session hijacking involving Vodafone Egypt."
+    },
+    {
+      "id": "Q228",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Update-Location-Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q229",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Zain Kuwait. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "965961234567",
+        "opcode": 318,
+        "procedure": "Authentication-Information-Request",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected impossible travel / velocity check",
+          "signature_id": 900006,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q230",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for CSR versus legitimate roaming traffic from Ooredoo Kuwait."
+    },
+    {
+      "id": "Q231",
+      "category": "standards_knowledge",
+      "question": "According to 3GPP TS 29.274, what controls apply to CAT3.1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q232",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter InsertSubscriberData (ISD) under CAT3.2 policy?"
+    },
+    {
+      "id": "Q233",
+      "category": "ir21_operator",
+      "question": "From IR.21 for Vodafone Egypt (EGYVF), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q234",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP UL (code/opcode 2)?"
+    },
+    {
+      "id": "Q235",
+      "category": "attack_detection",
+      "question": "Map the attack 'GTP session hijacking' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q236",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT3.2 policy on inbound MAP ULR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q237",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected impossible travel / velocity check involving STC Saudi Arabia."
+    },
+    {
+      "id": "Q238",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for Create Session Request, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q239",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from Vodafone Egypt. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "20101234567",
+        "opcode": 70,
+        "procedure": "ProvideSubscriberInfo",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected Origin-Realm spoofing",
+          "signature_id": 900008,
+          "category": "CAT3",
+          "severity": 2
+        }
+      }
+    },
+    {
+      "id": "Q240",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT3.2 handling differs for ISD versus legitimate roaming traffic from Etisalat UAE."
+    },
+    {
+      "id": "Q241",
+      "category": "standards_knowledge",
+      "question": "According to FS.20, what controls apply to CAT1 MAP signaling on interconnect?"
+    },
+    {
+      "id": "Q242",
+      "category": "policy_validation",
+      "question": "What parameters must be validated for an inbound Diameter UpdateLocation (UL) under CAT2 policy?"
+    },
+    {
+      "id": "Q243",
+      "category": "ir21_operator",
+      "question": "From IR.21 for STC Saudi Arabia (SAUSTC), what Diameter realm and GT prefixes are published for roaming?"
+    },
+    {
+      "id": "Q244",
+      "category": "ids_suricata",
+      "question": "What enrolled Suricata detection rule covers unauthorized CAP ULR (code/opcode 316)?"
+    },
+    {
+      "id": "Q245",
+      "category": "attack_detection",
+      "question": "Map the attack 'impossible travel / velocity check' to the GSMA category and detection rule that should fire."
+    },
+    {
+      "id": "Q246",
+      "category": "rule_drafting",
+      "question": "Draft a Suricata drop/alert rule to enforce CAT2 policy on inbound MAP CSR from unknown partners. Do not invent unpublished SIDs."
+    },
+    {
+      "id": "Q247",
+      "category": "investigation",
+      "question": "Explain how an interconnect firewall should investigate suspected Origin-Realm spoofing involving Zain Kuwait."
+    },
+    {
+      "id": "Q248",
+      "category": "protocol_messages",
+      "question": "What is the GTP message type/command for InsertSubscriberData, and which fields identify the roaming partner?"
+    },
+    {
+      "id": "Q249",
+      "category": "case1_live_ids",
+      "question": "Live interconnect signaling was captured from STC Saudi Arabia. Decide ALLOW, BLOCK, or ESCALATE, name the GSMA category, and cite the enrolled rule if any.",
+      "observation": {
+        "event_type": "alert",
+        "protocol": "CAP",
+        "src_ip": "10.10.0.1",
+        "dest_ip": "10.10.0.2",
+        "origin_realm": "",
+        "calling_gt": "966501234567",
+        "opcode": 71,
+        "procedure": "AnyTimeInterrogation",
+        "imsi": "419050123456789",
+        "alert": {
+          "signature": "Suspected authentication vector probing",
+          "signature_id": 900002,
+          "category": "CAT1",
+          "severity": 1
+        }
+      }
+    },
+    {
+      "id": "Q250",
+      "category": "standards_knowledge",
+      "question": "Compare how CAT2 handling differs for UL versus legitimate roaming traffic from Mobily Saudi Arabia."
+    }
+  ]
+}

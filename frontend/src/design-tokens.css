@@ -1,0 +1,128 @@
+/**
+ * CORTES Analyst — Midnight Telecom SOC
+ * Tokens from Stitch project 9038904388659941371 (Screen Dashboard Design System).
+ */
+
+:root {
+  /* —— Core surfaces —— */
+  --bg-primary: #050B1A;
+  --bg-secondary: #040914;
+  --bg-panel: #0A1730;
+  --bg-panel-hover: #0E1F3F;
+  --bg-elevated: #0E1F3F;
+  --bg-tertiary: #0E1F3F;
+  --bg-code: #020611;
+
+  --border: #16305A;
+  --border-bright: rgba(34, 211, 238, 0.35);
+  --border-strong: #16305A;
+
+  --text-primary: #F1F6FF;
+  --text-secondary: #9DB2D6;
+  --text-muted: #5F7699;
+  --text-link: #38D6F5;
+
+  /* —— Accents (CAT1 cyan · CAT2 violet · CAT3 amber) —— */
+  --cyan: #22D3EE;
+  --cyan-bright: #8AEBFF;
+  --cyan-dim: rgba(34, 211, 238, 0.12);
+  --blue: #3B82F6;
+  --blue-deep: #1D4ED8;
+
+  --purple: #A855F7;
+  --purple-bright: #C084FC;
+
+  --teal: #22D3EE;
+  --green: #10D9A0;
+
+  --warning: #F5A524;
+  --orange: #F5A524;
+  --amber: #F5A524;
+  --gold: #F5A524;
+
+  --danger: #F43F5E;
+  --danger-dark: #9F1239;
+  --red: #F43F5E;
+  --crimson: #F43F5E;
+  --magenta: #A855F7;
+
+  /* —— Panels / aliases used by existing CSS —— */
+  --panel: rgba(10, 23, 48, 0.55);
+  --panel-2: #0E1F3F;
+  --panel-hover: #0E1F3F;
+  --glass: rgba(10, 23, 48, 0.48);
+  --glass-strong: rgba(10, 23, 48, 0.72);
+  --glass-tab: rgba(14, 31, 63, 0.42);
+  --blur: blur(18px) saturate(1.35);
+
+  --sg-void: var(--bg-primary);
+  --sg-ink: var(--bg-secondary);
+  --sg-panel: var(--bg-panel);
+  --sg-elevated: var(--bg-elevated);
+  --sg-glass: var(--glass);
+  --sg-line: var(--border);
+  --sg-line-strong: var(--border-bright);
+  --sg-text: var(--text-primary);
+  --sg-text-2: var(--text-secondary);
+  --sg-text-3: var(--text-muted);
+  --sg-mint: var(--cyan);
+  --sg-mint-deep: var(--blue);
+  --sg-rose: var(--danger);
+  --sg-violet: var(--purple);
+  --sg-amber: var(--warning);
+  --sg-blue: var(--blue);
+  --sg-green: var(--green);
+  --sg-ink-text: #040914;
+
+  --sg-glow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  --sg-glow-mint: 0 0 24px rgba(34, 211, 238, 0.2);
+  --sg-glow-rose: 0 0 20px rgba(244, 63, 94, 0.22);
+  --sg-glow-cyan: 0 0 20px rgba(34, 211, 238, 0.2);
+
+  /* —— Geometry —— */
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-lg: 16px;
+  --sg-radius: var(--radius);
+  --sg-radius-sm: var(--radius-sm);
+  --sg-radius-lg: var(--radius-lg);
+
+  --shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  --ease: 200ms cubic-bezier(0.22, 1, 0.36, 1);
+  --sg-ease: var(--ease);
+
+  --sidebar-w: 228px;
+  --sg-sidebar: var(--sidebar-w);
+  --history-w: 300px;
+  --intel-w: 276px;
+
+  /* —— Typography —— */
+  --font-ui: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+.sg-label {
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sg-panel {
+  background: var(--glass);
+  border: 1px solid rgba(34, 211, 238, 0.14);
+  border-radius: var(--radius);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 14px 36px rgba(0, 0, 0, 0.28);
+  backdrop-filter: var(--blur);
+}
+
+.sg-panel:hover {
+  border-color: var(--border-bright);
+}
+
+.sg-focus-ring:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}

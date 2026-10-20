@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below (update authors/DOI when the IEEE Access article is published)."
+title: "A Knowledge-Grounded Agentic AI Framework for Multi-Protocol Telecom Signaling Security"
+type: software
+authors:
+  - family-names: Ali
+    given-names: Muhammad Haris
+  - family-names: Rehman
+    given-names: Altaf ur
+repository-code: "https://github.com/muhamamdharrisali255/A-Knowledge-Grounded-Agentic-AI-Framework-for-Multi-Protocol-Telecom-Signaling-Security"
+url: "https://github.com/muhamamdharrisali255/A-Knowledge-Grounded-Agentic-AI-Framework-for-Multi-Protocol-Telecom-Signaling-Security"
+license: MIT
+keywords:
+  - telecom signaling security
+  - knowledge-grounded
+  - agentic AI
+  - SS7
+  - Diameter
+  - GTP
+  - multiprotocol correlation
+  - GraphRAG
+  - Suricata
+  - IEEE Access

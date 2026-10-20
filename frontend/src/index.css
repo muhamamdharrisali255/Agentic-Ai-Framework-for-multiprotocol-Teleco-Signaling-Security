@@ -1,0 +1,46 @@
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-ui, 'Inter', system-ui, sans-serif);
+  color: var(--text-primary, #E8F4FF);
+  background: var(--bg-primary, #030812);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--cyan, #00D9FF);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
